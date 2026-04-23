@@ -60,9 +60,9 @@ Tab:AddToggle({
                         if b:FindFirstChild("ProximityPrompt") then
                             if b.ProximityPrompt.Enabled == true and not b.Parent.Parent.PlotSign.Board.SurfaceGui.TextLabel.Text == game.Players.LocalPlayer.Name .. "'s plot" then
                                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = b.CFrame
-                                wait(0.3)
+                                wait(0.1)
                                 fireproximityprompt(b.ProximityPrompt)
-                                wait(1)
+                                wait(0.5)
                                 for i,s in pairs(getplot():GetDescendants()) do
 	            			        if s.Name == "TouchInterest" and s.Parent.Name == "Floor" then
 		            		            firetouchinterest(humanoidrootpart(),s.Parent,0)
