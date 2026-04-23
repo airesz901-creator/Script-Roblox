@@ -58,7 +58,7 @@ Tab:AddToggle({
                 if v:FindFirstChild("Hitbox") then
                     for i,b in pairs(v:GetChildren()) do
                         if b:FindFirstChild("ProximityPrompt") then
-                            if b.ProximityPrompt.Enabled == true and not game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") and b.Parent.Parent.PlotSign.Board.SurfaceGui.TextLabel.Text ~= game.Players.LocalPlayer.Name .. "'s plot" then
+                            if b.ProximityPrompt.Enabled == true and not b.Parent.Parent.PlotSign.Board.SurfaceGui.TextLabel.Text == game.Players.LocalPlayer.Name .. "'s plot" then
                                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = b.CFrame
                                 wait(0.3)
                                 fireproximityprompt(b.ProximityPrompt)
