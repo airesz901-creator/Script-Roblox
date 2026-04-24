@@ -34,9 +34,6 @@ function humanoidrootpart()
         return game.Players.LocalPlayer.Character.HumanoidRootPart
     end
 end
---local
-local path = getsenv(game:GetService("Players").LocalPlayer.Character.AntiCheat)
-local path2 = getsenv(game:GetService("Players").LocalPlayer.Character.AntiCheat2)
 local hum = humanoidrootpart()
 local hum2 = humanoid()
 local fp = fireproximityprompt
@@ -100,13 +97,6 @@ function farmrocket()
         until rocketlaunch.Value == true or owner().LaunchStation.LoudSpeaker.SoundBlock["Alarm_03"].Playing == true or not getgenv().farmrocket
     end
 end
---anticheat
-hookfunction(path.checkState, function()
-    return
-end)
-hookfunction(path2.check, function()
-    return
-end)
 --mission
 function mission()
     hum.CFrame = game:GetService("Workspace").Islands.CloudIsland.Obby.PrizeChest.Chest.CFrame * CFrame.new(0, 2, 0)
