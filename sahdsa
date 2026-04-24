@@ -60,7 +60,7 @@ function exe()
             game.Players.LocalPlayer:Kick("Blacklist")
             warn("Youre Blacklist From Our Script")
         else
-            --script here
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/airesz17890/Games/main/gameid.lua"))()
         end
     end
     local t = (string.format("%." .. tostring(decimals) .. "f\n", os.clock() - x))
