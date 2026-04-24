@@ -31,17 +31,6 @@ function getpremium()
         return "No"
     end
 end
-function getexploithwid()
-    local Hwid
-    local body = Request({Url = 'https://httpbin.org/get'; Method = 'GET'}).Body;
-    local decoded = game:GetService('HttpService'):JSONDecode(body)
-    local headers = decoded.headers
-    for i, v in pairs(headers) do
-        if type(i) == "string" and i:lower():match("fingerprint") then Hwid = v end
-    end
-    if not Hwid then return "Hwid not found!" end
-    return Hwid
-end
 function temp()
     local scripttime = game.Workspace.DistributedGameTime
     local seconds = scripttime % 60
@@ -49,23 +38,6 @@ function temp()
     local hours = math.floor(scripttime / 3600)
     local tempo = string.format("%.0f:%.0f:%.0f", hours, minutes, seconds)
     return tempo
-end
-function exe()
-    local decimals = 5
-    local x = os.clock()
-    local hwid2 = getexploithwid()
-    local t = (string.format("%." .. tostring(decimals) .. "f\n", os.clock() - x))
-    return t
-end
-function getbl()
-    local hwid2 = getexploithwid()
-    for i, v in pairs(blacklist) do
-        if v == hwid or v == hwid2 then
-            return "Yes"
-        else
-            return "No"
-        end
-    end
 end
 local LocalizationService = game:GetService("LocalizationService")
 local CountryCodes = {
@@ -446,16 +418,6 @@ local msg = {
                 {
                     ["name"] = "**Place Version**",
                     ["value"] = game.PlaceVersion,
-                    ["inline"] = true
-                },
-                {
-                    ["name"] = "**Blacklist**",
-                    ["value"] = getbl(),
-                    ["inline"] = true
-                },
-                {
-                    ["name"] = "**Exploit Hwid**",
-                    ["value"] = getexploithwid(),
                     ["inline"] = true
                 }
             },
