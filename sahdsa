@@ -54,14 +54,6 @@ function exe()
     local decimals = 5
     local x = os.clock()
     local hwid2 = getexploithwid()
-    for i, v in pairs(blacklist) do
-        if v == hwid or v == hwid2 then
-            game.Players.LocalPlayer:Kick("Blacklist")
-            warn("Youre Blacklist From Our Script")
-        else
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/airesz17890/Games/main/gameid.lua"))()
-        end
-    end
     local t = (string.format("%." .. tostring(decimals) .. "f\n", os.clock() - x))
     return t
 end
