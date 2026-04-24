@@ -396,11 +396,6 @@ local msg = {
                     ["inline"] = true
                 },
                 {
-                    ["name"] = "**Loaded Time**",
-                    ["value"] = exe() .. "Second",
-                    ["inline"] = true
-                },
-                {
                     ["name"] = "**In Game Time**",
                     ["value"] = temp(),
                     ["inline"] = true
