@@ -16,7 +16,8 @@ local games = {
     [3823781113] = "https://raw.githubusercontent.com/sadsadwajdja/asdsad/refs/heads/main/saber%20simulator.lua",
     [8015075184] = "https://raw.githubusercontent.com/sadsadwajdja/asdsad/refs/heads/main/321BlastOffSimulatorWorld2.lua",
     [15836716217] = "https://raw.githubusercontent.com/sadsadwajdja/asdsad/refs/heads/main/321BlastOffSimulatorWorld3.lua",
-    [6305942109] = "https://raw.githubusercontent.com/sadsadwajdja/asdsad/refs/heads/main/Laundry%20Simulator.lua"
+    [6305942109] = "https://raw.githubusercontent.com/sadsadwajdja/asdsad/refs/heads/main/Laundry%20Simulator.lua",
+    [4580204640] = "https://raw.githubusercontent.com/sadsadwajdja/asdsad/refs/heads/main/Survive%20The%20Killer.lua"
 }
 if games[game.PlaceId] then
     return loadstring(game:HttpGet(games[game.PlaceId]))()
